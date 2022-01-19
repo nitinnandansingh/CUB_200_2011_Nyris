@@ -65,7 +65,9 @@ Google Colab Link : https://colab.research.google.com/drive/1l10gG065sdCoY_nrQwz
         > Recall@k : Number of test images with at least one similar returned image of same class by total number n of test images
         > Precision : Precision is the number of correct results divided by the number of all returned results.
     
-    3. The Feature Vector of a test image is compared(using Cosine Similarity) with all the feature vectors present in the test data feature vectors. The images with most similar feature vector are shown as a result. I have taken Recall@k as the choice of metric. I have retieved top 5 images and this value is the value of k.
+    3. The Feature Vector of a test image is compared(using Cosine Similarity) with all the feature vectors present in the test data feature vectors. 
+       The images with most similar feature vector are shown as a result. I have taken Recall@k as the choice of metric. 
+       I have retieved top 5 images and this value is the value of k.
 
     4. Recall@k was chosen for this project with 200 test images(I could not use all the test images as it led to system hanging)
 
