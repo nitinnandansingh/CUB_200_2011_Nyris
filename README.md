@@ -3,7 +3,7 @@
 
 This project is a part of application for a Working Student position at Nyris GmbH.
 
-This projects contains 4 Tasks : 
+It contains 4 Tasks : 
 
 Task 1: Create a GitHub Repository
     
@@ -39,7 +39,7 @@ Google Colab Link : https://colab.research.google.com/drive/1T83C6ItlUyhtGj8iNCF
     3. Save the extracted features as a numpy file which will be required solving Task 4.
 
     Solution : 
-    1. VGG16 was loaded without classification layers
+    1. For this project, VGG16 was used without classification layers. VGG16 is a good architecture as baseline model. Alternatively, ResNet could be used. 
     2. More layers were added and the model was trained on train data
     3. Model and its weights were saved.
     4. Feature Vectors for train and test dataset were generated.
@@ -63,19 +63,20 @@ Google Colab Link : https://colab.research.google.com/drive/1l10gG065sdCoY_nrQwz
     
     2.  > Recall : Recall is the number of correct results divided by the number of results that should have been returned.
           In the case of image retrieval it is the number of relevant images returned out of all relevant images
-        > Recall@k : Number of test images with at least one similar returned image of same class by total number n of test images.
+          
+        > Recall@k : According to the referenced paper - 'Deep Metric Learning via Lifted Structured Feature Embedding' Recall@k is the number of test images with             at least one similar returned image of same class by total number of test images.
+          
+        > Precision : Precision is the number of correct results divided by the number of all returned results.
           In the case of image retrieval it is the number of relevant images returned out of the total images retrieved(relevant or irrelevant)
           
           For precision and recall, relevancy can be defined by a cutoff similarity measure. 
-          
-        > Precision : Precision is the number of correct results divided by the number of all returned results.
     
     3. The Feature Vector of a test image is compared(using Cosine Similarity) with all the feature vectors present in the test data feature vectors. 
        The images with most similar feature vector are shown as a result. I have taken Recall@k as the choice of metric. 
        I have retieved top 5 images and this value is the value of k.
 
     4. Recall@k was chosen for this project with 200 test images. 
-       All the test images were not taken, due to excessive load on memomy and limited system configuration)
+       All the test images were not taken, due to excessive load on memomy and limited system configuration.
 
        For 200 test images recall value was 0.945
 
